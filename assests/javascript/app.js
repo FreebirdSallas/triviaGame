@@ -11,7 +11,20 @@ function countdown() {
         timeLeft--;
     }
 }
-
 function doSomething() {
-    alert("Alright, pencils down!");
+    alert("Alright, pencils down, and Submit!");
+}
+
+function showResults(){
+  $(button).on("click", showResults);
+  var correct = 0;
+  var question1 = document.quiz.q1.value;
+  var question2 = document.quiz.q2.value;
+  var question3 = document.quiz.q3.value;
+
+    if(question1 === "a" || question2 === "a" || question3 === "a"){
+        correct++;
+    }
+  $("#after-submit").style.visibility = "visible";
+  $("#number_correct").innerHTML = correct
 }
