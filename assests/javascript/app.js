@@ -14,17 +14,23 @@ function countdown() {
 function doSomething() {
     alert("Alright, pencils down, and Submit!");
 }
-
+$('.btn-success').on("click", showResults);
 function showResults(){
-  $(button).on("click", showResults);
+ 
   var correct = 0;
-  var question1 = document.quiz.q1.value;
-  var question2 = document.quiz.q2.value;
-  var question3 = document.quiz.q3.value;
-
-    if(question1 === "a" || question2 === "a" || question3 === "a"){
+  var question1 = $("input:radio[name=q1]:checked").val()
+  var question2 = $("input:radio[name=q2]:checked").val()
+  var question3 = $("input:radio[name=q3]:checked").val()
+console.log(question1);
+    if(question1 === "a"){
+        correct++
+    }
+    if(question2 === "a"){
         correct++;
     }
-  $("#after-submit").style.visibility = "visible";
-  $("#number_correct").innerHTML = correct
-}
+    if(question3 === "a"){
+        correct++;
+    }
+  number_correct.innerHTML = correct;
+};
+showResults();
