@@ -1,4 +1,4 @@
-var timeLeft = 30;
+var timeLeft = 25;
 var elem = document.getElementById("countDown");
 var timerId = setInterval(countdown, 1000);
 
@@ -6,6 +6,7 @@ function countdown() {
     if (timeLeft == -1) {
         clearTimeout(timerId);
         doSomething();
+        showResults();
     } else {
         elem.innerHTML = timeLeft + ' seconds remaining';
         timeLeft--;

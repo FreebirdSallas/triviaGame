@@ -1,3 +1,12 @@
 form {
     text-align: center;
+
 }
+body {
+    color: white;
+    background-color: black;
+}
+h1 {
+    font-size: 25px;
+}
+
